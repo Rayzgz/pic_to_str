@@ -15,9 +15,6 @@ enter the following commands
     $ vim output.txt
 """
 
-
-
-
 from PIL import Image
 import argparse
 
@@ -49,6 +46,7 @@ def get_char(r,g,b,alpha = 256):
     # transform function
     gray = int(0.2126 * r + 0.7152 * g + 0.0722 * b)
 
+    # transfer units to index into the list of characters
     unit = (256.0 + 1)/length
     return ascii_char[int(gray/unit)]
 
